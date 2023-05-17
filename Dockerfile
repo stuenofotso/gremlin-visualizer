@@ -8,7 +8,7 @@ RUN npm cache clean --force && \
 	#cd gremlin-visualizer-master && \
 	#npm install
 
-RUN mkdir gremlin-visualizer-master 
+RUN mkdir  gremlin-visualizer-master
     
 COPY . gremlin-visualizer-master/
 
