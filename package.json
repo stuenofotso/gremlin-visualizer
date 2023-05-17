@@ -22,9 +22,11 @@
     "redux-logger": "^3.0.6",
     "vis-network": "^6.4.4"
   },
+  "proxy": "http://0.0.0.0:3001",
   "scripts": {
-    "client": "react-scripts start",
-    "start": "concurrently \"\" \"npm run client\"",
+    "client": "HOST=0.0.0.0 react-scripts start",
+    "server": "node proxy-server.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
